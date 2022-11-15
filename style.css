@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Abril Fatface', cursive;
+}
+
+body{
+    background-color: cornflowerblue;
+}
+
+main{
+    width: 400px;
+    height: 550px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 40px auto;
+    font-size: 2em;
+    text-align: center;
+}
+
+
+/* Numeros e operador */
+.calc{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 3em;
+}
+
+.calc .first-num{
+    grid-column: 1/3;
+    text-align: center;
+}
+
+.calc .second-num{
+    grid-column: 2/3;
+    text-align: left;
+}
+
+.calc > span{
+    height: 5px;
+    width: 350px;
+    background-color: black;
+    grid-column: 1/3;
+}
+
+
+/* Mensagem de erro ou acerto */
+.error{
+    margin: 10px 0;
+    font-size: 1em;
+    height: 100px;
+}
+
+.error .error-msg{
+    opacity: 0;
+    /* Não parece ser necessário */
+    /* pointer-events: none; */
+}
+
+.error .play-again{
+    margin: 0 auto;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    color: antiquewhite;
+}
+
+.error .play-again.hide{
+    display: none;
+}
+
+
+/* Escolher resposta */
+.choises{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.choises > button{
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
